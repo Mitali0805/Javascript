@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature Converter</title>
+
+        <script language="javascript">
+           
+           function tempConvert(){
+              var text;
+              var temp1= document.getElementById("temp").value;
+                if(isNaN(temp1) || temp1==""){
+                    //validation
+                    text= "Invalid Input";
+                    document.getElementById("p1").innerHTML= text;
+                }
+                else{
+              //formula for temperature coversion  
+                 var temp2= (temp1-32)*(5/9);
+                document.write("Temperature in Celsius"+" "+temp2);
+                }
+            
+            }
+        </script>
+    </head>
+
+    <body style="margin:20px;padding: 20px;text-align: center;;background-color: skyblue ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <h1>Tempearature Converter</h1>
+       
+        <label>Enter Tempearature :</label>
+        <input type="text" id="temp" placeholder="Enter temperature in Fahrenheit"><br/>
+        <button id="btn" onclick="tempConvert()" style="margin-top: 20px;padding: 10px;background-color: yellowgreen;">Show Result</button>
+        <p id="p1"></p>
+        
+    </body>
+
+</html>
