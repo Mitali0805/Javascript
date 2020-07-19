@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rectangle class with prototype</title>
+    </head>
+    <body>
+        <script>
+            class Rectangle {
+                constructor (width,height){
+                    this.height=height;
+                    this.width=width;
+
+                    Rectangle.prototype.getArea = function(){
+                        return(this.height*this.width);
+                    };
+                }
+            }
+
+            var r  = new Rectangle(4,5);
+            r.width;
+            r.height;
+            document.write(r.getArea());
+
+            r.hieght=50;
+         console.log(r.height);
+            
+        </script>
+    </body>
+</html>

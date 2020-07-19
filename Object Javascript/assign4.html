@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bank Account</title>
+    </head>
+    <body>
+        <script>
+            function BankAccount(){                             
+                this.accountNumber;
+                this.accountHolderName;
+                this.accountBalance;
+                
+                this.savings = function(isSalary){
+                    this.isSalary=isSalary;
+                },
+
+                this.current = function(odLimit){
+                    this.odLimit=odLimit;
+                },
+
+                this.withdraw=function(amount){
+                    if(this.accountBalance-amount==0){
+                        console.log("Account balance is less");
+                    }else if(this.odLimit - amount < 0){
+                        console.log("odLimit goes negative");
+                    }else{
+                        this.accountBalance=this.accountBalance-amount;
+                        console.log(amount+"is debited from balance");
+                    }
+                };
+
+                this.getCurrentBalance=function(){
+                    console.log("Your Current Balance :"+this.accountBalance);
+                }
+
+            }
+         
+           
+            var sav = new BankAccount();
+            sav.accountNumber = 101;
+            sav.accountHolderName = "Mitali";
+            sav.accountBalance = 90000;
+            sav.savings(40000);
+
+            var cur = new BankAccount();
+            cur.accountNumber = 102;
+            cur.accountHolderName = "Neha";
+            cur.accountBalance = 80000;
+            cur.current(50000);
+
+
+            sav.withdraw(10000);
+            sav.getCurrentBalance();
+
+            cur.withdraw(50000);
+            cur.getCurrentBalance();
+
+
+        </script>
+    </body>
+</html>

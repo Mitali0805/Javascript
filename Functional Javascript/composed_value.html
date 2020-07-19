@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nested function</title>
+    </head>
+    <body>
+        <script lang="javascript">
+
+           var value;
+            function square(x){
+                //console.log(x*x)
+                return (x*x);
+            }
+
+            function double(x){
+                return(x * 2);
+            }
+
+            function composedValue(f1,f2,value){
+                return (f1(f2(value)));
+                
+            }composedValue(square,double,value);
+
+        </script>
+    </body>
+</html>

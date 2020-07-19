@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>find function</title>
+    </head>
+    <body>
+        <script lang="javascript">
+
+            function isEven(num){
+                return (num %2 ==0);
+            }
+
+           function find(array,test){
+            for(var i=0; i<array.length ; i++){
+                if(test(array[i])){
+                    return array[i];
+                }
+            }
+         }
+            
+        </script>
+    </body>
+</html>
+
+<!-- var arr=[1,3,5,4,2];
+           // var x = window.prompt("Enter any Number");
+
+            function isEven(arr){
+
+                for(var i=0; i< arr.length; i++){
+
+                if(arr[i]%2==0){
+                    return arr[i];   
+                }
+                
+            }
+        }
+
+         function find(arr,isEven){
+
+            var y=isEven(arr);
+            document.write("first even no of given array is:"+y);
+         }find(arr,isEven);
+        -->

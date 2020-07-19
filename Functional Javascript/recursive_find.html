@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pure recursive Find isEven</title>
+    </head>
+    <body>
+        <script lan="javascript">
+
+                
+               function isEven(num){
+                   return (num%2 == 0);
+               }
+
+               function find(array, test) {
+                if (array.length == 0) {
+                    return(undefined);
+                } else if (test(array[0])) {
+                    return(array[0]);
+                } else {
+                    return(find(array.splice(1),test));    //recursive function call
+                }
+            }
+               find([1,3,5,4,2],isEven);
+               
+        </script>
+    </body>
+</html>

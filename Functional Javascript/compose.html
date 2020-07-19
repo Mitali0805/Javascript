@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compose Function</title>
+    </head>
+    <body>
+        <script>
+            function square(x){
+                
+                return (x*x);
+            }
+
+            function double(x){
+                return(x * 2);
+            }
+
+            function compose(f1, f2) {
+                return (function(value){
+                    return(f1(f2(value)));
+                });
+           }
+
+            var f1 = compose(square,double);
+            f1(5);
+            f1(10);
+
+            var f2 = compose(double,square);
+            f1(5);
+            f1(10);
+
+        </script>
+    </body>
+</html>
+
+      <!--var x = window.prompt("Enter any Number");
+           
+            function compose(x){
+                var f1= square(double(x));
+                document.write("Square of double value is:"+f1 +"<br>");
+ 
+                var f2= double(square(x));
+                document.write("Double of Square is"+f2);
+            }compose(x);
+
+            
+            function square(x){
+                
+                return (x*x);
+            }
+
+            function double(x){
+                return(x * 2);
+            }
+        -->
+      

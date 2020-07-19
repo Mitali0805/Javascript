@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Person</title>
+    </head>
+    <body>
+        <script>
+            
+            function Person(fname,lname,age,skills,address,dateOfBirth,married,profession){
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+                this.skills=skills;
+                this.address=address;
+                this.dateOfBirth=dateOfBirth;
+                this.married=married;
+                this.profession=profession;
+            }
+             
+            amithab=new Person("amithab","bachan",22,["acting"],{city:"mumbai",pincode:416602},"08/05/1998",true,"Sr.Analyst");
+
+            abhishek=new Person("abhishek",21,["karate"],"27/10/1999",true,"Analyst");
+            var abhishek=Object.create(amithab);
+
+            Aaradhya=new Person("Aaradhya",8,["drawing"],"12/12/2012",false,"student");
+         
+            var Aaradhya=Object.create(amithab);
+            var Aaradhya=Object.create(abhishek);
+            
+
+
+             print=function(){
+                console.log(abhishek);
+                console.log(Aaradhya.lname);
+                console.log(Aaradhya.address);
+            }();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pure recursive map</title>
+    </head>
+    <body>
+        <script>
+           
+           function map(array, func) {
+            if (array.length == 0) {
+                return(array);
+            } else {
+                return([func(array[0])].concat(map(array.slice(1), func)));
+            }
+         }
+
+        function square(x) {
+            return(x*x);
+        }
+
+        function double(x) {
+              return(x*2);
+        }
+
+        map([1,2,3,4],square);
+        map([1,4,9,16],double);
+        </script>
+    </body>
+</html>

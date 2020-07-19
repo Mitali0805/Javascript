@@ -1,4 +1,4 @@
-var n = prompt("Please enter a number", "Any Number 1-9"),prod=1;
+var n = prompt("Please enter a number for fact/add", "Any Number 1-9"),prod=1;
 var choose = prompt("Please enter a number 1 for factorial 2 for sum", "1-2");
 if(!isNaN(n)){
 if(choose == 1){
